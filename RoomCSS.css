@@ -1,0 +1,35 @@
+@keyframes staffUsernameAnimation {
+    0% { background-position: 0% }
+    100% { background-position: -100% }
+}
+
+.msg .radiantemote {
+    max-width: 5em;
+    max-height: 3em;
+}
+
+#chat .msg .from.staff .icon,
+#chat .msg .from.dj .icon {
+    background-size: 100% 100% !important;
+}
+
+#user-lists .list.room .user.is-staff .icon {
+    background-size: 100% 100% !important;
+}
+
+.is-staff .name,
+#chat .from.staff .un,
+#chat .from.dj .un {
+
+    background: linear-gradient(90deg, #ac76ff, #d29de8, #ac76ff, #d29de8, #ac76ff);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    animation: staffUsernameAnimation 2s linear infinite;
+}
+
+#user-rollover .info .role .icon {
+    background-size: 100% 100% !important;
+}
