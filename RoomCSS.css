@@ -9,11 +9,19 @@
 }
 
 #chat .msg .from.staff .icon,
-#chat .msg .from.dj .icon {
-    background-size: 100% 100% !important;
-}
-
-#user-lists .list.room .user.is-staff .icon {
+#chat .msg .from.dj .icon,
+#user-rollover .info .role .icon,
+    /* Must specify individually so upvote / downvotes dont get messed up. */
+#user-lists .list.room .user.is-staff .icon-chat-host,
+#user-lists .list.room .user.is-staff .icon-chat-cohost,
+#user-lists .list.room .user.is-staff .icon-chat-manager,
+#user-lists .list.room .user.is-staff .icon-chat-bouncer,
+#user-lists .list.room .user.is-staff .icon-chat-dj,
+#waitlist .list .user .is-staff .name .icon.icon-chat-host,
+#waitlist .list .user .is-staff .name .icon.icon-chat-cohost,
+#waitlist .list .user .is-staff .name .icon.icon-chat-manager,
+#waitlist .list .user .is-staff .name .icon.icon-chat-bouncer,
+#waitlist .list .user .is-staff .name .icon.icon-chat-dj {
     background-size: 100% 100% !important;
 }
 
@@ -30,6 +38,7 @@
     animation: staffUsernameAnimation 2s linear infinite;
 }
 
-#user-rollover .info .role .icon {
-    background-size: 100% 100% !important;
+/* Prevent waitlist names from being invisible. */
+#waitlist .is-staff .name {
+    color: #ac76ff;
 }
