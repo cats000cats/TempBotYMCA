@@ -2,7 +2,7 @@
   "room": "The YMCA",
   "author": "YMCA Staff",
   "icon": null,
-  "css": "https://raw.githack.com/cats000cats/TempBotYMCA/dev/RoomCSS.css",
+  "css": "https://raw.githack.com/cats000cats/TempBotYMCA/master/RoomCSS.css",
   "rules": {
     "allowAutorespond": true,
     "allowAutowoot": true,
