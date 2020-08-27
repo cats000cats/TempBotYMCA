@@ -7,7 +7,7 @@
     "allowAutorespond": true,
     "allowAutowoot": true,
     "allowAutojoin": true,
-    "allowAutograb": true,
+    "allowAutograb": false,
     "allowSmartVote": true,
     "allowEmotes": true,
     "allowShowingMehs": true,
@@ -36,7 +36,7 @@
     "manager": "https://i.imgur.com/vPVx4Iv.png",
     "bouncer": "https://i.imgur.com/PBhGJgh.png",
     "rdj": "https://i.imgur.com/jmT5WoR.png",
-    "subscriber": null,
+    "subscriber": "https://i.imgur.com/NDH0wuv.png",
     "silversubscriber": null
   },
   "emotes": {
@@ -160,6 +160,7 @@
     "kkool": "https://cdn.betterttv.net/emote/56c2cff2d9ec6bf744247bf1/2x",
     "kooldoge": "https://cdn.betterttv.net/emote/58b443ca47585e3e07f8b59c/2x",
     "kumapls": "https://cdn.betterttv.net/emote/5af454b657376e68acb7512a/2x",
+    "lelw": "https://cdn.betterttv.net/emote/5eab63f7ce7cbf62fe166342/2x",
     "lickl": "https://cdn.betterttv.net/emote/5afdd15ab5f610729e2f6e7a/2x",
     "lickr": "https://cdn.betterttv.net/emote/5afdd149b5f610729e2f6e75/2x",
     "lolitriggered": "https://cdn.betterttv.net/emote/590696d6aedb6101b0caaff6/2x",

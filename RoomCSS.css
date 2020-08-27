@@ -3,11 +3,23 @@
     100% { background-position: -100% }
 }
 
+@keyframes rainbowAnimation {
+
+    0% { color: #e03434 }
+    17% { color: #e8972c; }
+    33% { color: #e5e82c; }
+    50% { color: #2ce832; }
+    67% { color: #91bfff; }
+    83% { color: #df86f7; }
+    100% { color: #e03434; }
+}
+
 .msg .radiantemote {
-    max-width: 5em;
+    max-width: 6em;
     max-height: 3em;
 }
 
+#chat .msg .from .icon-chat-subscriber,
 #chat .msg .from.staff .icon,
 #chat .msg .from.dj .icon,
 #user-rollover .info .role .icon,
@@ -23,6 +35,8 @@
 #waitlist .list .user .is-staff .name .icon.icon-chat-bouncer,
 #waitlist .list .user .is-staff .name .icon.icon-chat-dj {
     background-size: 100% 100% !important;
+    width: 17px;
+    height: 17px;
 }
 
 .is-staff .name,
@@ -38,7 +52,20 @@
     animation: staffUsernameAnimation 2s linear infinite;
 }
 
+/* Shae Animation */
+.is-staff.id-50228093 .name,
+#chat .id-50228093 .from.staff .un,
+#chat .id-50228093 .from.dj .un {
+    animation: rainbowAnimation 10s linear infinite;
+}
+
 /* Prevent waitlist names from being invisible. */
 #waitlist .is-staff .name {
     color: #ac76ff;
+}
+
+/* Allow the bot to use newline characters for formatting and make its text stand out */
+#chat-messages .id-51109738 {
+    color: #ebb8ff;
+    white-space: pre-wrap;
 }
