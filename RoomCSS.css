@@ -1,71 +1,112 @@
-@keyframes staffUsernameAnimation {
-    0% { background-position: 0% }
-    100% { background-position: -100% }
-}
-
-@keyframes rainbowAnimation {
-
-    0% { color: #e03434 }
-    17% { color: #e8972c; }
-    33% { color: #e5e82c; }
-    50% { color: #2ce832; }
-    67% { color: #91bfff; }
-    83% { color: #df86f7; }
-    100% { color: #e03434; }
-}
-
-.msg .radiantemote {
-    max-width: 6em;
-    max-height: 3em;
-}
-
-#chat .msg .from .icon-chat-subscriber,
-#chat .msg .from.staff .icon,
-#chat .msg .from.dj .icon,
-#user-rollover .info .role .icon,
-    /* Must specify individually so upvote / downvotes dont get messed up. */
-#user-lists .list.room .user.is-staff .icon-chat-host,
-#user-lists .list.room .user.is-staff .icon-chat-cohost,
-#user-lists .list.room .user.is-staff .icon-chat-manager,
-#user-lists .list.room .user.is-staff .icon-chat-bouncer,
-#user-lists .list.room .user.is-staff .icon-chat-dj,
-#waitlist .list .user .is-staff .name .icon.icon-chat-host,
-#waitlist .list .user .is-staff .name .icon.icon-chat-cohost,
-#waitlist .list .user .is-staff .name .icon.icon-chat-manager,
-#waitlist .list .user .is-staff .name .icon.icon-chat-bouncer,
-#waitlist .list .user .is-staff .name .icon.icon-chat-dj {
+#chat .msg .from .icon-chat-subscriber, #chat .msg .from.staff .icon, #chat .msg .from.dj .icon, #user-rollover .info .role .icon, #user-lists .list.room .user.is-staff .icon, #waitlist .list .user .is-staff .name .icon {
     background-size: 100% 100% !important;
     width: 17px;
     height: 17px;
 }
-
-.is-staff .name,
-#chat .from.staff .un,
-#chat .from.dj .un {
-
-    background: linear-gradient(90deg, #ac76ff, #d29de8, #ac76ff, #d29de8, #ac76ff);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 13px;
-    font-weight: bold;
-    animation: staffUsernameAnimation 2s linear infinite;
-}
-
-/* Shae Animation */
-.is-staff.id-50228093 .name,
-#chat .id-50228093 .from.staff .un,
-#chat .id-50228093 .from.dj .un {
-    animation: rainbowAnimation 10s linear infinite;
-}
-
-/* Prevent waitlist names from being invisible. */
 #waitlist .is-staff .name {
     color: #ac76ff;
 }
-
-/* Allow the bot to use newline characters for formatting and make its text stand out */
 #chat-messages .id-51109738 {
     color: #ebb8ff;
     white-space: pre-wrap;
 }
+#waitlist .list .user .name .icon.icon-chat-subscriber, #user-lists .list.room .user .icon.icon-chat-subscriber {
+    background-size: 100% 100% !important;
+}
+.icon.icon-woot, .icon.icon-meh, #user-lists .list.room .user.is-staff .icon.icon-woot, #user-lists .list.room .user.is-staff .icon.icon-meh {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    background-position: initial;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat;
+}
+.icon.icon-woot {
+    background-image: url(https://i.imgur.com/NJZlHJG.png);
+}
+.icon.icon-meh {
+    background-image: url(https://i.imgur.com/fzB9xv5.png);
+}
+.msg .radiantemote {
+    max-width: 6em;
+    max-height: 3em;
+}
+@keyframes scrollingBackground {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+@keyframes rainbowAnimation {
+    0% {
+        color: #e03434;
+    }
+    16.6666666667% {
+        color: #e8972c;
+    }
+    33.3333333333% {
+        color: #e5e82c;
+    }
+    50% {
+        color: #2ce832;
+    }
+    66.6666666667% {
+        color: #91bfff;
+    }
+    83.3333333333% {
+        color: #df86f7;
+    }
+    100% {
+        color: #e03434;
+    }
+}
+@keyframes shadowAnimation {
+    0% {
+        text-shadow: 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb;
+    }
+    50% {
+        text-shadow: 0px 0px 2px #6d78ff, 0px 0px 2px #6d78ff, 0px 0px 2px #6d78ff, 0px 0px 2px #6d78ff;
+    }
+    100% {
+        text-shadow: 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb;
+    }
+}
+.is-staff .name, #chat .from.staff .un, #chat .from.dj .un {
+    background: repeating-linear-gradient(90deg, #ac76ff, #d29de8, #ac76ff 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 200% 100%;
+    animation: scrollingBackground 3s linear infinite;
+}
+.is-staff.id-50228093 .name, #chat .id-50228093 .from.staff .un, #chat .id-50228093 .from.dj .un {
+    animation: rainbowAnimation 10s linear infinite;
+}
+.is-staff.id-51381057 .name, #chat .id-51381057 .from.staff .un, #chat .id-51381057 .from.dj .un {
+    color: black;
+    background: initial;
+    -webkit-background-clip: initial;
+    animation: shadowAnimation 5s linear infinite;
+}
+.is-staff.id-50365379 .name, #chat .id-50365379 .from.staff .un, #chat .id-50365379 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #e03434, #e8972c, #e5e82c, #2ce832, #91bfff, #df86f7, #e03434 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 500% 100%;
+    animation: scrollingBackground 7s linear infinite;
+}
+.is-staff.id-50601445 .name, #chat .id-50601445 .from.staff .un, #chat .id-50601445 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #3cb556, #a0daff, #3cb556 66.6666666667%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 300% 100%;
+    animation: scrollingBackground 2s linear infinite;
+}
+ 

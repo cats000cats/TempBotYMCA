@@ -1,0 +1,132 @@
+#chat .msg .from .icon-chat-subscriber,
+#chat .msg .from.staff .icon,
+#chat .msg .from.dj .icon,
+#user-rollover .info .role .icon,
+#user-lists .list.room .user.is-staff .icon,
+#waitlist .list .user .is-staff .name .icon {
+  background-size: 100% 100% !important;
+  width: 17px;
+  height: 17px;
+}
+
+// Prevent waitlist names from being invisible.
+#waitlist .is-staff .name {
+  color: #ac76ff;
+}
+
+// Allow the bot to use newline characters for formatting and make its text stand out.
+#chat-messages .id-51109738 {
+  color: #ebb8ff;
+  white-space: pre-wrap;
+}
+
+#waitlist .list .user .name .icon.icon-chat-subscriber,
+#user-lists .list.room .user .icon.icon-chat-subscriber {
+  background-size: 100% 100% !important;
+}
+
+.icon.icon-woot, .icon.icon-meh,
+#user-lists .list.room .user.is-staff .icon.icon-woot,
+#user-lists .list.room .user.is-staff .icon.icon-meh {
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  background-position: initial;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat;
+}
+
+.icon.icon-woot {
+  background-image: url(https://i.imgur.com/NJZlHJG.png)
+}
+
+.icon.icon-meh {
+  background-image: url(https://i.imgur.com/fzB9xv5.png)
+}
+
+// Limit size of emotes so we dont have to worry about finding / creating properly sized ones
+.msg .radiantemote {
+  max-width: 6em;
+  max-height: 3em;
+}
+
+//        Staff Animation CSS
+
+$rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
+
+@keyframes scrollingBackground {
+  0% { background-position: 0 }
+  100% { background-position: 100% }
+}
+
+// Seems something like this will only work for "reversed" looking animations.
+// Regular ones might require custom calculated ending keyframes instead of custom gradient repeat location.
+@mixin scrollingBackgroundAnimation($duration, $gradientWidth, $colors) {
+
+  background: repeating-linear-gradient(90deg, #{join($colors, $separator: comma)} percentage($gradientWidth / ($gradientWidth + 100)));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 13px;
+  font-weight: bold;
+  background-size: $gradientWidth + 100 + "%" 100%;
+  animation: scrollingBackground $duration linear infinite;
+}
+
+@mixin heavyTextShadow($x, $y, $blur, $color) {
+    text-shadow: $x $y $blur $color, $x $y $blur $color, $x $y $blur $color, $x $y $blur $color;
+}
+
+@mixin staffAnimation($id) {
+
+  .is-staff.id-#{$id} .name,
+  #chat .id-#{$id} .from.staff .un,
+  #chat .id-#{$id} .from.dj .un {
+    @content
+  }
+}
+
+@keyframes rainbowAnimation {
+
+  @for $i from 1 through length($rainbowLoop) {
+    #{percentage(($i - 1) / (length($rainbowLoop) - 1))} {
+      color: nth($rainbowLoop, $i)
+    }
+  }
+}
+
+@keyframes shadowAnimation {
+
+  0% { @include heavyTextShadow(0px, 0px, 2px, #25a2fb) }
+  50% { @include heavyTextShadow(0px, 0px, 2px, #6d78ff) }
+  100% { @include heavyTextShadow(0px, 0px, 2px, #25a2fb) }
+}
+
+.is-staff .name,
+#chat .from.staff .un,
+#chat .from.dj .un {
+
+    @include scrollingBackgroundAnimation(3s, 100, #ac76ff #d29de8 #ac76ff);
+}
+
+// Shae Animation
+@include staffAnimation(50228093) {
+  animation: rainbowAnimation 10s linear infinite;
+}
+
+// Camgaroo Animation
+@include staffAnimation(51381057) {
+  color: black;
+  background: initial;
+  -webkit-background-clip: initial;
+  animation: shadowAnimation 5s linear infinite;
+}
+
+// Ireland Animation
+@include staffAnimation(50365379) {
+  @include scrollingBackgroundAnimation(7s, 400, $rainbowLoop);
+}
+
+// Phonon Animation
+@include staffAnimation(50601445) {
+  @include scrollingBackgroundAnimation(2s, 200, #3cb556 #a0daff #3cb556);
+}
