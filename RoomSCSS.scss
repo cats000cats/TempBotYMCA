@@ -130,3 +130,8 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 @include staffAnimation(50601445) {
   @include scrollingBackgroundAnimation(2s, 200, #3cb556 #a0daff #3cb556);
 }
+
+// Stxph Animation
+@include staffAnimation(40990226) {
+  @include scrollingBackgroundAnimation(2s, 250, #ca1f7b #ff1dce #ff80ff #ff1dce #ca1f7b);
+}

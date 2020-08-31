@@ -1,3 +1,4 @@
+/* Transpiled from RoomSCSS */
 #chat .msg .from .icon-chat-subscriber, #chat .msg .from.staff .icon, #chat .msg .from.dj .icon, #user-rollover .info .role .icon, #user-lists .list.room .user.is-staff .icon, #waitlist .list .user .is-staff .name .icon {
     background-size: 100% 100% !important;
     width: 17px;
@@ -109,4 +110,12 @@
     background-size: 300% 100%;
     animation: scrollingBackground 2s linear infinite;
 }
- 
+.is-staff.id-40990226 .name, #chat .id-40990226 .from.staff .un, #chat .id-40990226 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #ca1f7b, #ff1dce, #ff80ff, #ff1dce, #ca1f7b 71.4285714286%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 350% 100%;
+    animation: scrollingBackground 2s linear infinite;
+}
