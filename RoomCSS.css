@@ -111,7 +111,7 @@
     animation: scrollingBackground 2s linear infinite;
 }
 .is-staff.id-40990226 .name, #chat .id-40990226 .from.staff .un, #chat .id-40990226 .from.dj .un {
-    background: repeating-linear-gradient(90deg, #ca1f7b, #ff1dce, #ff80ff, #ff1dce, #ca1f7b 71.4285714286%);
+    background: repeating-linear-gradient(90deg, #00ffff, #00cccc, #008585, #00cccc, #00ffff 71.4285714286%);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 13px;
