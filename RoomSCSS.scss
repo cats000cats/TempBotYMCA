@@ -37,11 +37,11 @@
 }
 
 .icon.icon-woot {
-  background-image: url(https://i.imgur.com/NJZlHJG.png)
+  background-image: url(https://i.imgur.com/Lf43tna.png)
 }
 
 .icon.icon-meh {
-  background-image: url(https://i.imgur.com/fzB9xv5.png)
+  background-image: url(https://i.imgur.com/85E8Zm1.png)
 }
 
 // Limit size of emotes so we dont have to worry about finding / creating properly sized ones
@@ -50,7 +50,61 @@
   max-height: 3em;
 }
 
+@mixin voteButtonMixin {
+  background-size: 100% 100%;
+  width: 30px;
+  height: 30px;
+}
+
+.fa-thumbs-up {
+  background: url(https://i.imgur.com/XLAJPkN.png);
+  @include voteButtonMixin;
+}
+
+.clicked .fa-thumbs-up {
+  background: url(https://i.imgur.com/Lf43tna.png);
+  @include voteButtonMixin;
+}
+
+.fa-thumbs-down {
+  background: url(https://i.imgur.com/FwBV4PY.png);
+  @include voteButtonMixin;
+}
+
+.clicked .fa-thumbs-down {
+  background: url(https://i.imgur.com/85E8Zm1.png);
+  @include voteButtonMixin;
+}
+
+// Upvote / Downvote symbols are actually text. Remove this so the background can be used for the custom symbols.
+.fa-thumbs-down:before,
+.fa-thumbs-up:before {
+  content: "";
+}
+
+// Positions the icons on the mobile version near the center of the circle.
+.community .btn-room-controls.btn-like,
+.community .btn-room-controls.btn-meh {
+  padding: 0px;
+}
+
+// Move the icons down slightly on the mobile version so they are more centered in the circle.
+.item--mobile .btn-room-controls.btn-meh .fa-thumbs-down {
+  margin: 8px 0px 0px 0px;
+}
+
+.item--mobile .btn-room-controls.btn-like .fa-thumbs-up {
+  margin: 4px 0px 0px 0px;
+}
+
+// Darken controls so the up / downvote icons are more visible.
+.community .room-controls--desktop {
+  background-color: rgba(0, 0, 0, .85);
+}
+
+// =========================================
 //        Staff Animation CSS
+// =========================================
 
 $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 
@@ -85,15 +139,6 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
   }
 }
 
-@keyframes rainbowAnimation {
-
-  @for $i from 1 through length($rainbowLoop) {
-    #{percentage(($i - 1) / (length($rainbowLoop) - 1))} {
-      color: nth($rainbowLoop, $i)
-    }
-  }
-}
-
 @keyframes shadowAnimation {
 
   0% { @include heavyTextShadow(0px, 0px, 2px, #25a2fb) }
@@ -110,7 +155,7 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 
 // Shae Animation
 @include staffAnimation(50228093) {
-  animation: rainbowAnimation 10s linear infinite;
+  @include scrollingBackgroundAnimation(2s, 250, #da70d6 #ff0080 #DA70D6)
 }
 
 // Camgaroo Animation
@@ -139,4 +184,9 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 // Jair Animation
 @include staffAnimation(50599320) {
   @include scrollingBackgroundAnimation(2s, 250, #70dc70 #32cd32 #239023 #32cd32 #70dc70);
+}
+
+// Lex Animation
+@include staffAnimation(40570213) {
+  @include scrollingBackgroundAnimation(6s, 600, #ff73d3 #ff3939 #ff9152 #ffc63e #ff9152 #ff3939 #ff73d3);
 }

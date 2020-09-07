@@ -23,14 +23,53 @@
     background-repeat: no-repeat;
 }
 .icon.icon-woot {
-    background-image: url(https://i.imgur.com/NJZlHJG.png);
+    background-image: url(https://i.imgur.com/Lf43tna.png);
 }
 .icon.icon-meh {
-    background-image: url(https://i.imgur.com/fzB9xv5.png);
+    background-image: url(https://i.imgur.com/85E8Zm1.png);
 }
 .msg .radiantemote {
     max-width: 6em;
     max-height: 3em;
+}
+.fa-thumbs-up {
+    background: url(https://i.imgur.com/XLAJPkN.png);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+.clicked .fa-thumbs-up {
+    background: url(https://i.imgur.com/Lf43tna.png);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+.fa-thumbs-down {
+    background: url(https://i.imgur.com/FwBV4PY.png);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+.clicked .fa-thumbs-down {
+    background: url(https://i.imgur.com/85E8Zm1.png);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+.fa-thumbs-down:before, .fa-thumbs-up:before {
+    content: "";
+}
+.community .btn-room-controls.btn-like, .community .btn-room-controls.btn-meh {
+    padding: 0px;
+}
+.item--mobile .btn-room-controls.btn-meh .fa-thumbs-down {
+    margin: 8px 0px 0px 0px;
+}
+.item--mobile .btn-room-controls.btn-like .fa-thumbs-up {
+    margin: 4px 0px 0px 0px;
+}
+.community .room-controls--desktop {
+    background-color: rgba(0, 0, 0, .85);
 }
 @keyframes scrollingBackground {
     0% {
@@ -38,29 +77,6 @@
     }
     100% {
         background-position: 100%;
-    }
-}
-@keyframes rainbowAnimation {
-    0% {
-        color: #e03434;
-    }
-    16.6666666667% {
-        color: #e8972c;
-    }
-    33.3333333333% {
-        color: #e5e82c;
-    }
-    50% {
-        color: #2ce832;
-    }
-    66.6666666667% {
-        color: #91bfff;
-    }
-    83.3333333333% {
-        color: #df86f7;
-    }
-    100% {
-        color: #e03434;
     }
 }
 @keyframes shadowAnimation {
@@ -84,7 +100,13 @@
     animation: scrollingBackground 3s linear infinite;
 }
 .is-staff.id-50228093 .name, #chat .id-50228093 .from.staff .un, #chat .id-50228093 .from.dj .un {
-    animation: rainbowAnimation 10s linear infinite;
+    background: repeating-linear-gradient(90deg, #da70d6, #ff0080, #da70d6 71.4285714286%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 350% 100%;
+    animation: scrollingBackground 2s linear infinite;
 }
 .is-staff.id-51381057 .name, #chat .id-51381057 .from.staff .un, #chat .id-51381057 .from.dj .un {
     color: black;
@@ -111,7 +133,7 @@
     animation: scrollingBackground 2s linear infinite;
 }
 .is-staff.id-40990226 .name, #chat .id-40990226 .from.staff .un, #chat .id-40990226 .from.dj .un {
-    background: repeating-linear-gradient(90deg, #00ffff, #00cccc, #008585, #00cccc, #00ffff 71.4285714286%);
+    background: repeating-linear-gradient(90deg, #0ff, #0cc, #008585, #0cc, #0ff 71.4285714286%);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 13px;
@@ -127,4 +149,13 @@
     font-weight: bold;
     background-size: 350% 100%;
     animation: scrollingBackground 2s linear infinite;
+}
+.is-staff.id-40570213 .name, #chat .id-40570213 .from.staff .un, #chat .id-40570213 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #ff73d3, #ff3939, #ff9152, #ffc63e, #ff9152, #ff3939, #ff73d3 85.7142857143%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 700% 100%;
+    animation: scrollingBackground 6s linear infinite;
 }
