@@ -102,6 +102,19 @@
   background-color: rgba(0, 0, 0, .85);
 }
 
+// Make RCS like / dislike / grab lists render above avatars.
+
+.community .room-controls {
+  z-index: 1 !important;
+}
+
+// Make RCS like / dislike / grab lists easier to see.
+div #meh-rs,
+div #like-rs,
+div #grab-rs {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
 // =========================================
 //        Staff Animation CSS
 // =========================================
@@ -155,7 +168,7 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 
 // Shae Animation
 @include staffAnimation(50228093) {
-  @include scrollingBackgroundAnimation(2s, 250, #da70d6 #ff0080 #DA70D6)
+  @include scrollingBackgroundAnimation(3s, 250, #d2227a #ff49a5 #ff0080 #ff49a5 #d2227a)
 }
 
 // Camgaroo Animation

@@ -71,6 +71,12 @@
 .community .room-controls--desktop {
     background-color: rgba(0, 0, 0, .85);
 }
+.community .room-controls {
+    z-index: 1 !important;
+}
+div #meh-rs, div #like-rs, div #grab-rs {
+    background-color: rgba(0, 0, 0, 0.85);
+}
 @keyframes scrollingBackground {
     0% {
         background-position: 0;
@@ -100,13 +106,13 @@
     animation: scrollingBackground 3s linear infinite;
 }
 .is-staff.id-50228093 .name, #chat .id-50228093 .from.staff .un, #chat .id-50228093 .from.dj .un {
-    background: repeating-linear-gradient(90deg, #da70d6, #ff0080, #da70d6 71.4285714286%);
+    background: repeating-linear-gradient(90deg, #d2227a, #ff49a5, #ff0080, #ff49a5, #d2227a 71.4285714286%);
     -webkit-background-clip: text;
     color: transparent;
     font-size: 13px;
     font-weight: bold;
     background-size: 350% 100%;
-    animation: scrollingBackground 2s linear infinite;
+    animation: scrollingBackground 3s linear infinite;
 }
 .is-staff.id-51381057 .name, #chat .id-51381057 .from.staff .un, #chat .id-51381057 .from.dj .un {
     color: black;
