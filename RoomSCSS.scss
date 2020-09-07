@@ -135,3 +135,8 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 @include staffAnimation(40990226) {
   @include scrollingBackgroundAnimation(2s, 250, #00ffff #00cccc #008585 #00cccc #00ffff);
 }
+
+// Jair Animation
+@include staffAnimation(50599320) {
+  @include scrollingBackgroundAnimation(2s, 250, #70dc70 #32cd32 #239023 #32cd32 #70dc70);
+}

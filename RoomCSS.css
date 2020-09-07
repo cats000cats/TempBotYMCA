@@ -119,3 +119,12 @@
     background-size: 350% 100%;
     animation: scrollingBackground 2s linear infinite;
 }
+.is-staff.id-50599320 .name, #chat .id-50599320 .from.staff .un, #chat .id-50599320 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #70dc70, #32cd32, #239023, #32cd32, #70dc70 71.4285714286%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 350% 100%;
+    animation: scrollingBackground 2s linear infinite;
+}
