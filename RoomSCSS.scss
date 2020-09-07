@@ -76,19 +76,31 @@
   @include voteButtonMixin;
 }
 
-// Upvote / Downvote symbols are actually text. Remove this so the background can be used for the custom symbols.
+.icon-list {
+  background: url(https://i.imgur.com/evqyBe9.png);
+  @include voteButtonMixin;
+}
+
+.clicked .icon-list {
+  background: url(https://i.imgur.com/ddNyyGs.png);
+  @include voteButtonMixin
+}
+
+// Upvote / Downvote / Grab symbols are actually text. Remove this so the background can be used for the custom symbols.
 .fa-thumbs-down:before,
-.fa-thumbs-up:before {
+.fa-thumbs-up:before,
+.icon-list:before {
   content: "";
 }
 
 // Positions the icons on the mobile version near the center of the circle.
 .community .btn-room-controls.btn-like,
-.community .btn-room-controls.btn-meh {
+.community .btn-room-controls.btn-meh,
+.community .btn-room-controls.btn-playlist {
   padding: 0px;
 }
 
-// Move the icons down slightly on the mobile version so they are more centered in the circle.
+// Move the icons slightly on the mobile version so they are more centered in the circle.
 .item--mobile .btn-room-controls.btn-meh .fa-thumbs-down {
   margin: 8px 0px 0px 0px;
 }
@@ -97,13 +109,16 @@
   margin: 4px 0px 0px 0px;
 }
 
+.item--mobile .btn-room-controls.btn-playlist .icon-list {
+  margin: 0px 0px 0px 4px;
+}
+
 // Darken controls so the up / downvote icons are more visible.
 .community .room-controls--desktop {
   background-color: rgba(0, 0, 0, .85);
 }
 
 // Make RCS like / dislike / grab lists render above avatars.
-
 .community .room-controls {
   z-index: 1 !important;
 }

@@ -56,10 +56,22 @@
     width: 30px;
     height: 30px;
 }
-.fa-thumbs-down:before, .fa-thumbs-up:before {
+.icon-list {
+    background: url(https://i.imgur.com/evqyBe9.png);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+.clicked .icon-list {
+    background: url(https://i.imgur.com/ddNyyGs.png);
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+.fa-thumbs-down:before, .fa-thumbs-up:before, .icon-list:before {
     content: "";
 }
-.community .btn-room-controls.btn-like, .community .btn-room-controls.btn-meh {
+.community .btn-room-controls.btn-like, .community .btn-room-controls.btn-meh, .community .btn-room-controls.btn-playlist {
     padding: 0px;
 }
 .item--mobile .btn-room-controls.btn-meh .fa-thumbs-down {
@@ -67,6 +79,9 @@
 }
 .item--mobile .btn-room-controls.btn-like .fa-thumbs-up {
     margin: 4px 0px 0px 0px;
+}
+.item--mobile .btn-room-controls.btn-playlist .icon-list {
+    margin: 0px 0px 0px 4px;
 }
 .community .room-controls--desktop {
     background-color: rgba(0, 0, 0, .85);
