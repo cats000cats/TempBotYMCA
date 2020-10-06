@@ -180,3 +180,12 @@ div #meh-rs, div #like-rs, div #grab-rs {
     background-size: 700% 100%;
     animation: scrollingBackground 6s linear infinite;
 }
+.is-staff.id-53065252 .name, #chat .id-53065252 .from.staff .un, #chat .id-53065252 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #42a5dc, #f0f, #42a5dc, #f0f, #42a5dc 71.4285714286%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 350% 100%;
+    animation: scrollingBackground 4s linear infinite;
+}

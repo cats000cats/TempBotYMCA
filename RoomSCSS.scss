@@ -218,3 +218,8 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 @include staffAnimation(40570213) {
   @include scrollingBackgroundAnimation(6s, 600, #ff73d3 #ff3939 #ff9152 #ffc63e #ff9152 #ff3939 #ff73d3);
 }
+
+// Colt Animation
+@include staffAnimation(53065252) {
+  @include scrollingBackgroundAnimation(4s, 250, #42a5dc #ff00ff #42a5dc #ff00ff #42a5dc);
+}
