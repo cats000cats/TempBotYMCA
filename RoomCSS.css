@@ -111,6 +111,17 @@ div #meh-rs, div #like-rs, div #grab-rs {
         text-shadow: 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb, 0px 0px 2px #25a2fb;
     }
 }
+@keyframes callumShadowAnimation {
+    0% {
+        text-shadow: 0px 0px 2px #ffdf00, 0px 0px 2px #ffdf00, 0px 0px 2px #ffdf00, 0px 0px 2px #ffdf00;
+    }
+    50% {
+        text-shadow: 0px 0px 2px #caa429, 0px 0px 2px #caa429, 0px 0px 2px #caa429, 0px 0px 2px #caa429;
+    }
+    100% {
+        text-shadow: 0px 0px 2px #ffdf00, 0px 0px 2px #ffdf00, 0px 0px 2px #ffdf00, 0px 0px 2px #ffdf00;
+    }
+}
 .is-staff .name, #chat .from.staff .un, #chat .from.dj .un {
     background: repeating-linear-gradient(90deg, #ac76ff, #d29de8, #ac76ff 50%);
     -webkit-background-clip: text;
@@ -189,3 +200,28 @@ div #meh-rs, div #like-rs, div #grab-rs {
     background-size: 350% 100%;
     animation: scrollingBackground 4s linear infinite;
 }
+.is-staff.id-52171196 .name, #chat .id-52171196 .from.staff .un, #chat .id-52171196 .from.dj .un {
+    color: #b90e0a;
+    background: initial;
+    -webkit-background-clip: initial;
+    animation: callumShadowAnimation 3s ease-in-out infinite;
+}
+.is-staff.id-52250250 .name, #chat .id-52250250 .from.staff .un, #chat .id-52250250 .from.dj .un {
+    background: repeating-linear-gradient(90deg, red, blue, red 71.4285714286%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 350% 100%;
+    animation: scrollingBackground 4s linear infinite;
+}
+.is-staff.id-45709913 .name, #chat .id-45709913 .from.staff .un, #chat .id-45709913 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #ea5b5b, red, #9e0000, red, #ea5b5b 71.4285714286%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 350% 100%;
+    animation: scrollingBackground 3s linear infinite;
+}
+
