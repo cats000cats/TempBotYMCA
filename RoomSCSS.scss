@@ -181,6 +181,12 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
   100% { @include heavyTextShadow(0px, 0px, 2px, #ffdf00) }
 }
 
+@keyframes coltahhhShadowAnimation {
+  0% { @include heavyTextShadow(0px, 0px, 2px, #03A9F4) }
+  50% { @include heavyTextShadow(0px, 0px, 2px, #f0f) }
+  100% { @include heavyTextShadow(0px, 0px, 2px, #03A9F4) }
+}
+
 .is-staff .name,
 #chat .from.staff .un,
 #chat .from.dj .un {
@@ -228,7 +234,9 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 
 // Colt Animation
 @include staffAnimation(53065252) {
-  @include scrollingBackgroundAnimation(4s, 250, #42a5dc #ff00ff #42a5dc #ff00ff #42a5dc);
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 13px;
+  animation: coltahhhShadowAnimation 4s cubic-bezier(0.55, 0.24, 1, 1) infinite;
 }
 
 // Callum Animation
