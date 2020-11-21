@@ -256,12 +256,3 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 @include staffAnimation(45709913) {
   @include scrollingBackgroundAnimation(3s, 250, #ea5b5b red #9e0000 red #ea5b5b);
 }
-
-// Cats incognito mode
-#chat .id-52229743 .from .un {
-  color: rgb(119, 127, 146);
-}
-
-#chat .id-52229743 .icon.icon-chat-subscriber {
-  display: none;
-}

@@ -231,9 +231,3 @@ div #meh-rs, div #like-rs, div #grab-rs {
     background-size: 350% 100%;
     animation: scrollingBackground 3s linear infinite;
 }
-#chat .id-52229743 .from .un {
-    color: #777f92;
-}
-#chat .id-52229743 .icon.icon-chat-subscriber {
-    display: none;
-}
