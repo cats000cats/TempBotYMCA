@@ -231,3 +231,12 @@ div #meh-rs, div #like-rs, div #grab-rs {
     background-size: 350% 100%;
     animation: scrollingBackground 3s linear infinite;
 }
+.is-staff.id-52204355 .name, #chat .id-52204355 .from.staff .un, #chat .id-52204355 .from.dj .un {
+    background: repeating-linear-gradient(90deg, #d2227a, #ff49a5, #ff0080, #ff49a5, #d2227a 71.4285714286%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 350% 100%;
+    animation: scrollingBackground 3s linear infinite;
+}
