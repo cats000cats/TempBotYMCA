@@ -1,3 +1,13 @@
+@font-face{
+  font-family: 'JetBrains Mono';
+  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.eot') format('embedded-opentype'),
+  url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+  url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff') format('woff'),
+  url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #chat .msg .from .icon-chat-subscriber,
 #chat .msg .from.staff .icon,
 #chat .msg .from.dj .icon,
@@ -12,12 +22,6 @@
 // Prevent waitlist names from being invisible.
 #waitlist .is-staff .name {
   color: #ac76ff;
-}
-
-// Allow the bot to use newline characters for formatting and make its text stand out.
-#chat-messages .id-51109738 {
-  color: #ebb8ff;
-  white-space: pre-wrap;
 }
 
 #waitlist .list .user .name .icon.icon-chat-subscriber,
@@ -131,6 +135,68 @@ div #grab-rs {
 }
 
 // =========================================
+//        Bot CSS
+// =========================================
+
+// Allow the bot to use newline characters for formatting and make its text stand out.
+// Use monospace font for nice formatting
+#chat #chat-messages .id-51109738 {
+  color: #ebb8ff;
+  white-space: pre-wrap;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+  tab-size: 4;
+
+  .name {
+    font-size: 11px !important;
+  }
+}
+
+@keyframes botMention {
+  0% {
+    border-top: 2px solid #ffbcff;
+    border-bottom: 2px solid #ffbcff;
+  }
+  100% {
+    border-top: 2px solid magenta;
+    border-bottom: 2px solid magenta;
+  }
+}
+
+// Remove badge from bot
+#chat .cm.id-51109738 .badge-box {
+  display: none;
+}
+
+// Remove bot name
+#chat .cm.id-51109738 .from {
+  display: none;
+}
+
+// Allow text to fill space where badge was
+#chat .id-51109738 .msg {
+  padding-left: 8px;
+}
+
+// Give mentions animation for visibility
+// We also use emotes for a sort of broadcast with mention styling.
+#chat .cm.mention.id-51109738,
+#chat .cm.emote.id-51109738 {
+  animation: botMention 1s linear forwards;
+  background-image: None;
+  background-color: #090009 !important;
+  min-height: 0;
+}
+
+// Non mentions from bot are less visible than mentions
+#chat .cm.message.id-51109738 {
+  border-top: 1px solid #4e024e;
+  border-bottom: 1px solid #4e024e;
+  background-color: #060006 !important;
+  min-height: 0;
+}
+
+// =========================================
 //        Staff Animation CSS
 // =========================================
 
@@ -232,13 +298,6 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
   @include scrollingBackgroundAnimation(6s, 600, #ff73d3 #ff3939 #ff9152 #ffc63e #ff9152 #ff3939 #ff73d3);
 }
 
-// Colt Animation
-@include staffAnimation(53065252) {
-  color: rgba(255, 255, 255, 0.37);
-  font-size: 13px;
-  animation: coltahhhShadowAnimation 4s cubic-bezier(0.55, 0.24, 1, 1) infinite;
-}
-
 // Callum Animation
 @include staffAnimation(52171196) {
   color: #b90e0a;
@@ -260,4 +319,11 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 // Ofifyy Animation
 @include staffAnimation(52204355) {
   @include scrollingBackgroundAnimation(3s, 250, #d2227a #ff49a5 #ff0080 #ff49a5 #d2227a)
+}
+
+// Colt Animation
+@include staffAnimation(53065252) {
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 13px;
+  animation: coltahhhShadowAnimation 4s cubic-bezier(0.55, 0.24, 1, 1) infinite;
 }

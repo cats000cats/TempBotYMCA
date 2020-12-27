@@ -1,4 +1,10 @@
 /* Transpiled from RoomSCSS */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.eot') format('embedded-opentype'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff') format('woff'), url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 #chat .msg .from .icon-chat-subscriber, #chat .msg .from.staff .icon, #chat .msg .from.dj .icon, #user-rollover .info .role .icon, #user-lists .list.room .user.is-staff .icon, #waitlist .list .user .is-staff .name .icon {
     background-size: 100% 100% !important;
     width: 17px;
@@ -6,10 +12,6 @@
 }
 #waitlist .is-staff .name {
     color: #ac76ff;
-}
-#chat-messages .id-51109738 {
-    color: #ebb8ff;
-    white-space: pre-wrap;
 }
 #waitlist .list .user .name .icon.icon-chat-subscriber, #user-lists .list.room .user .icon.icon-chat-subscriber {
     background-size: 100% 100% !important;
@@ -91,6 +93,47 @@
 }
 div #meh-rs, div #like-rs, div #grab-rs {
     background-color: rgba(0, 0, 0, 0.85);
+}
+#chat #chat-messages .id-51109738 {
+    color: #ebb8ff;
+    white-space: pre-wrap;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    tab-size: 4;
+}
+#chat #chat-messages .id-51109738 .name {
+    font-size: 11px !important;
+}
+@keyframes botMention {
+    0% {
+        border-top: 2px solid #ffbcff;
+        border-bottom: 2px solid #ffbcff;
+    }
+    100% {
+        border-top: 2px solid magenta;
+        border-bottom: 2px solid magenta;
+    }
+}
+#chat .cm.id-51109738 .badge-box {
+    display: none;
+}
+#chat .cm.id-51109738 .from {
+    display: none;
+}
+#chat .id-51109738 .msg {
+    padding-left: 8px;
+}
+#chat .cm.mention.id-51109738, #chat .cm.emote.id-51109738 {
+    animation: botMention 1s linear forwards;
+    background-image: None;
+    background-color: #090009 !important;
+    min-height: 0;
+}
+#chat .cm.message.id-51109738 {
+    border-top: 1px solid #4e024e;
+    border-bottom: 1px solid #4e024e;
+    background-color: #060006 !important;
+    min-height: 0;
 }
 @keyframes scrollingBackground {
     0% {
@@ -202,11 +245,6 @@ div #meh-rs, div #like-rs, div #grab-rs {
     background-size: 700% 100%;
     animation: scrollingBackground 6s linear infinite;
 }
-.is-staff.id-53065252 .name, #chat .id-53065252 .from.staff .un, #chat .id-53065252 .from.dj .un {
-    color: rgba(255, 255, 255, 0.37);
-    font-size: 13px;
-    animation: coltahhhShadowAnimation 4s cubic-bezier(0.55, 0.24, 1, 1) infinite;
-}
 .is-staff.id-52171196 .name, #chat .id-52171196 .from.staff .un, #chat .id-52171196 .from.dj .un {
     color: #b90e0a;
     background: initial;
@@ -239,4 +277,9 @@ div #meh-rs, div #like-rs, div #grab-rs {
     font-weight: bold;
     background-size: 350% 100%;
     animation: scrollingBackground 3s linear infinite;
+}
+.is-staff.id-53065252 .name, #chat .id-53065252 .from.staff .un, #chat .id-53065252 .from.dj .un {
+    color: rgba(255, 255, 255, 0.37);
+    font-size: 13px;
+    animation: coltahhhShadowAnimation 4s cubic-bezier(0.55, 0.24, 1, 1) infinite;
 }
