@@ -311,3 +311,10 @@ div #meh-rs, div #like-rs, div #grab-rs {
 #chat .id-53065252 .badge-box .bdg {
     visibility: hidden;
 }
+#chat .id-53108710 .badge-box {
+    background: url("https://i.imgur.com/cRIL219.png");
+    background-size: 31px 31px;
+}
+#chat .id-53108710 .badge-box .bdg {
+    visibility: hidden;
+}
