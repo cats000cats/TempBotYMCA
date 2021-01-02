@@ -283,3 +283,24 @@ div #meh-rs, div #like-rs, div #grab-rs {
     font-size: 13px;
     animation: coltahhhShadowAnimation 4s cubic-bezier(0.55, 0.24, 1, 1) infinite;
 }
+#chat .id-52171196 .badge-box {
+    background: url("https://i.imgur.com/N4FTego.gif");
+    background-size: 31px 31px;
+}
+#chat .id-52171196 .badge-box .bdg {
+    visibility: hidden;
+}
+#chat .id-52229743 .badge-box {
+    background: url("https://i.imgur.com/5HrpLDR.gif");
+    background-size: 31px 31px;
+}
+#chat .id-52229743 .badge-box .bdg {
+    visibility: hidden;
+}
+#chat .id-52250250 .badge-box {
+    background: url("https://i.imgur.com/Amv43LK.gif");
+    background-size: 31px 31px;
+}
+#chat .id-52250250 .badge-box .bdg {
+    visibility: hidden;
+}

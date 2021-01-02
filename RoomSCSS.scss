@@ -327,3 +327,28 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
   font-size: 13px;
   animation: coltahhhShadowAnimation 4s cubic-bezier(0.55, 0.24, 1, 1) infinite;
 }
+
+// =========================================
+//        Custom Badges
+// =========================================
+
+@mixin customBadge($id, $url) {
+
+  #chat .id-#{$id} .badge-box {
+    background: url($url);
+    background-size: 31px 31px; // Weird 1 pixel issues if 30 is used instead of 31.
+  }
+
+  #chat .id-#{$id} .badge-box .bdg {
+    visibility: hidden;
+  }
+}
+
+// Custom badge for Callum820
+@include customBadge(52171196, "https://i.imgur.com/N4FTego.gif");
+
+// Custom badge for Cats00cats
+@include customBadge(52229743, "https://i.imgur.com/5HrpLDR.gif");
+
+// Custom badge for Sleep Streamer Ben
+@include customBadge(52250250, "https://i.imgur.com/Amv43LK.gif");
