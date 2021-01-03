@@ -354,7 +354,21 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 @include customBadge(52250250, "https://i.imgur.com/Amv43LK.gif");
 
 // Custom badge for Coltahhh
-@include customBadge(53065252, "https://i.imgur.com/wIrR95f.gif");
+@include customBadge(53065252, "https://i.imgur.com/0ujQrjN.jpg");
 
 // Custom badge for Skellyking21
 @include customBadge(53108710, "https://i.imgur.com/cRIL219.png");
+
+// =========================================
+//        Custom Secondary Chat Colors
+// =========================================
+
+@mixin secondaryColor($id, $color) {
+
+  #chat #chat-messages .emote.id-#{$id} {
+    color: $color;
+  }
+}
+
+// Secondary color for Cats00cats
+@include secondaryColor(52229743, #80FF80)
