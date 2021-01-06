@@ -365,6 +365,9 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 // Custom badge for Chiaki
 @include customBadge(53537695, "https://i.imgur.com/E1RG4pX.gif");
 
+// Custom badge for Stxphxn.
+@include customBadge(40990226, "https://i.imgur.com/ZqpgQAY.gif");
+
 // =========================================
 //        Custom Secondary Chat Colors
 // =========================================
@@ -376,5 +379,9 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
   }
 }
 
-// Secondary color for Cats00cats
-@include secondaryColor(52229743, #80FF80)
+// Custom secondary color for Cats00cats
+#chat #chat-messages .emote.id-52229743 .text {
+  @include scrollingBackgroundAnimation(7s, 400, $rainbowLoop);
+  // Set font size back to normal since scrollingBackgroundAnimation changes it.
+  font-size: 12px;
+}

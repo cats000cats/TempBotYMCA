@@ -332,6 +332,20 @@ div #meh-rs, div #like-rs, div #grab-rs {
 #chat .id-53537695 .badge-box .bdg {
     visibility: hidden;
 }
-#chat #chat-messages .emote.id-52229743 {
-    color: #80ff80;
+#chat .id-40990226 .badge-box {
+    background: url("https://i.imgur.com/ZqpgQAY.gif");
+    background-size: 31px 31px;
+}
+#chat .id-40990226 .badge-box .bdg {
+    visibility: hidden;
+}
+#chat #chat-messages .emote.id-52229743 .text {
+    background: repeating-linear-gradient(90deg, #e03434, #e8972c, #e5e82c, #2ce832, #91bfff, #df86f7, #e03434 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 13px;
+    font-weight: bold;
+    background-size: 500% 100%;
+    animation: scrollingBackground 7s linear infinite;
+    font-size: 12px;
 }
