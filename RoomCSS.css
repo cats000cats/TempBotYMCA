@@ -173,7 +173,7 @@ div #meh-rs, div #like-rs, div #grab-rs {
         text-shadow: 0px 0px 2px #f0f, 0px 0px 2px #f0f, 0px 0px 2px #f0f, 0px 0px 2px #f0f;
     }
     100% {
-        text-shadow: 0px 0px 2px #03a9f4, 0px 0px 2px #03a9f4, 0px 0px 2px #03a9f4, 0px 0px 2px #03a9f4;
+        text-shadow: 0px 0px 2px #01a9f4, 0px 0px 2px #01a9f4, 0px 0px 2px #01a9f4, 0px 0px 2px #01a9f4;
     }
 }
 .is-staff .name, #chat .from.staff .un, #chat .from.dj .un {
@@ -338,6 +338,39 @@ div #meh-rs, div #like-rs, div #grab-rs {
 }
 #chat .id-40990226 .badge-box .bdg {
     visibility: hidden;
+}
+#chat .id-53643546 .badge-box {
+    background: url("https://www.colorhexa.com/ff6600.png");
+    background-size: 31px 31px;
+}
+#chat .id-53643546 .badge-box .bdg {
+    visibility: hidden;
+}
+#chat .id-54161700 .badge-box {
+    background: url("https://media.discordapp.net/attachments/422562236964274179/796475645512646696/juicyjamjam.gif");
+    background-size: 31px 31px;
+}
+#chat .id-54161700 .badge-box .bdg {
+    visibility: hidden;
+}
+#chat .id-50599320 .badge-box {
+    background: url("https://pbs.twimg.com/media/BRMJYo5CUAE9Yiy.jpg");
+    background-size: 31px 31px;
+}
+#chat .id-50599320 .badge-box .bdg {
+    visibility: hidden;
+}
+#chat #chat-messages .message.id-53065252 {
+    color: #ef64f2;
+}
+#chat #chat-messages .emote.id-52171196 {
+    color: #90e4ff;
+}
+#chat #chat-messages .emote.id-53065252 {
+    color: #64bceb;
+}
+#chat #chat-messages .emote.id-52204355 {
+    color: #fd99c6;
 }
 #chat #chat-messages .emote.id-52229743 .text {
     background: repeating-linear-gradient(90deg, #e03434, #e8972c, #e5e82c, #2ce832, #91bfff, #df86f7, #e03434 80%);

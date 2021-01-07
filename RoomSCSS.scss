@@ -248,9 +248,9 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 }
 
 @keyframes coltahhhShadowAnimation {
-  0% { @include heavyTextShadow(0px, 0px, 2px, #03A9F4) }
+  0% { @include heavyTextShadow(0px, 0px, 2px, #03a9f4) }
   50% { @include heavyTextShadow(0px, 0px, 2px, #f0f) }
-  100% { @include heavyTextShadow(0px, 0px, 2px, #03A9F4) }
+  100% { @include heavyTextShadow(0px, 0px, 2px, #01a9f4) }
 }
 
 .is-staff .name,
@@ -368,6 +368,29 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 // Custom badge for Stxphxn.
 @include customBadge(40990226, "https://i.imgur.com/ZqpgQAY.gif");
 
+// Custom badge for Make It Orange
+@include customBadge(53643546, "https://www.colorhexa.com/ff6600.png");
+
+// Custom badge for JuicyLuicy
+@include customBadge(54161700, "https://media.discordapp.net/attachments/422562236964274179/796475645512646696/juicyjamjam.gif");
+
+// Custom badge for Jair
+@include customBadge(50599320, "https://pbs.twimg.com/media/BRMJYo5CUAE9Yiy.jpg");
+
+// =========================================
+//        Custom Primary Chat Colors
+// =========================================
+
+@mixin primaryColor($id, $color) {
+
+  #chat #chat-messages .message.id-#{$id} {
+    color: $color;
+  }
+}
+
+// Primary Color for Coltahhh
+@include primaryColor(53065252, #ef64f2);
+
 // =========================================
 //        Custom Secondary Chat Colors
 // =========================================
@@ -378,6 +401,15 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
     color: $color;
   }
 }
+
+// Secondary Color for Callum
+@include secondaryColor(52171196, #90e4ff);
+
+// Secondary Color for Coltahhh
+@include secondaryColor(53065252, #64bceb);
+
+// Secondary Color for Ofifyy
+@include secondaryColor(52204355, #fd99c6);
 
 // Custom secondary color for Cats00cats
 #chat #chat-messages .emote.id-52229743 .text {
