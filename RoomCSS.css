@@ -360,8 +360,21 @@ div #meh-rs, div #like-rs, div #grab-rs {
 #chat .id-50599320 .badge-box .bdg {
     visibility: hidden;
 }
+#chat .id-52023647 .badge-box {
+    background: url("https://i.imgur.com/g3UkIlw.jpg");
+    background-size: 31px 31px;
+}
+#chat .id-52023647 .badge-box .bdg {
+    visibility: hidden;
+}
 #chat #chat-messages .message.id-53065252 {
     color: #ef64f2;
+}
+#chat #chat-messages .message.id-52171196 {
+    color: #fff57f;
+}
+#chat #chat-messages .message.id-52250250 {
+    color: #64ffff;
 }
 #chat #chat-messages .emote.id-52171196 {
     color: #90e4ff;
