@@ -380,6 +380,10 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 // Custom badge for Peter
 @include customBadge(52023647, "https://i.imgur.com/g3UkIlw.jpg");
 
+// Custom badge for Cjimo
+@include customBadge(51756032, "https://i.imgur.com/W3sSTVg.gif");
+
+
 // =========================================
 //        Custom Primary Chat Colors
 // =========================================
@@ -392,13 +396,13 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 }
 
 // Primary Color for Coltahhh
-@include primaryColor(53065252, #ef64f2);
+@include primaryColor(53065252, #ef96f2);
 
 // Primary Color for Callum
-@include primaryColor(52171196, #fff57f);
+@include primaryColor(52171196, #fff596);
 
 // Primary Color for Ben
-@include primaryColor(52250250, #64ffff);
+@include primaryColor(52250250, #96ffff);
 
 // =========================================
 //        Custom Secondary Chat Colors
@@ -415,7 +419,7 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 @include secondaryColor(52171196, #90e4ff);
 
 // Secondary Color for Coltahhh
-@include secondaryColor(53065252, #64bceb);
+@include secondaryColor(53065252, #9bc6fd);
 
 // Secondary Color for Ofifyy
 @include secondaryColor(52204355, #fd99c6);
@@ -426,3 +430,17 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
   // Set font size back to normal since scrollingBackgroundAnimation changes it.
   font-size: 12px;
 }
+
+// =========================================
+//        Custom Name Colors
+// =========================================
+
+@mixin nameColor($id, $color) {
+
+  #chat #chat-messages .id-#{$id} .un {
+    color: $color;
+  }
+}
+
+// Custom name color for Samiroo
+@include nameColor(52591202, #ff69b4)
