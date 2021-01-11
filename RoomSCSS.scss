@@ -366,7 +366,7 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 @include customBadge(53537695, "https://i.imgur.com/E1RG4pX.gif");
 
 // Custom badge for Stxphxn.
-@include customBadge(40990226, "https://i.imgur.com/WS91KND.gif");
+@include customBadge(40990226, "https://i.imgur.com/ZqpgQAY.gif");
 
 // Custom badge for Make It Orange
 @include customBadge(53643546, "https://www.colorhexa.com/ff6600.png");
@@ -446,4 +446,18 @@ $rainbowLoop: #e03434 #e8972c #e5e82c #2ce832 #91bfff #df86f7 #e03434;
 }
 
 // Custom name color for Samiroo
-@include nameColor(52591202, #ff69b4)
+@include nameColor(52591202, #ff69b4);
+
+// =========================================
+//        Custom Text Backgrounds
+// =========================================
+
+// Star background for all stxphxn messages
+#chat #chat-messages .id-40990226 {
+  background: url("https://i.imgur.com/WS91KND.gif");
+}
+
+// Star background for cats00cats emotes.
+#chat #chat-messages .emote.id-52229743 {
+  background: url("https://i.imgur.com/WS91KND.gif");
+}

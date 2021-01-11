@@ -333,7 +333,7 @@ div #meh-rs, div #like-rs, div #grab-rs {
     visibility: hidden;
 }
 #chat .id-40990226 .badge-box {
-    background: url("https://i.imgur.com/WS91KND.gif");
+    background: url("https://i.imgur.com/ZqpgQAY.gif");
     background-size: 31px 31px;
 }
 #chat .id-40990226 .badge-box .bdg {
@@ -408,3 +408,10 @@ div #meh-rs, div #like-rs, div #grab-rs {
 #chat #chat-messages .id-52591202 .un {
     color: #ff69b4;
 }
+#chat #chat-messages .id-40990226 {
+    background: url("https://i.imgur.com/WS91KND.gif");
+}
+#chat #chat-messages .emote.id-52229743 {
+    background: url("https://i.imgur.com/WS91KND.gif");
+}
+ 
